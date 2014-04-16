@@ -12,7 +12,7 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
-    %title Site Name
+    %title What Comes Next Is The Future
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %meta{:name => "description", :content => ""}
     %meta{:name => "keywords", :content => ""}
@@ -22,25 +22,10 @@
     %header.site-header{:role => "banner"}
       .container
         %h1.site-name
-          %a{:href => "/"} Site Name
+          %a{:href => "/"} What Comes Next Is The Future
         -# Use an image for your logo
         %a{:href => "#"}
           %img.main-logo{:alt => "", :src => ""}
-        %nav.primary-navigation{:role => "navigation"}
-          %ul
-            %li
-              %a{:href => "/internal.html"} Internal
-            %li
-              %a{:href => "/internal.html"} Internal Two
-            %li
-              %a{:href => "/internal.html"} Internal Three
-        -#
-          %form.search{:role => "form"}
-            %label{:for => "search"} Search:
-            %input{:type => "search", :role => "search"}
-            %input{:type => "submit", :value => "Submit"}
-            -# Alternatively, you can use the <button> element
-              %button Submit
 
     =yield
 
@@ -49,38 +34,21 @@
         %section.social-media
           %ul
             %li
-              %a{:href => "#", :rel => "me"} Social Account
+              %a{:href => "https://twitter.com/futureisnext", :rel => "me"} Twitter
+            %li
+              %a{:href => "#", :rel => "me"} Facebook
+            %li
+              %a{:href => "#", :rel => "me"} Kickstarter
             %li
               %a{:href => "#", :rel => "me"} Social Account
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
-        %nav.footer-nav
-          %ul
-            %li
-              %a{:href => "#"} About
-            %li
-              %a{:href => "#"} Acknowledgements
-            %li
-              %a{:href => "#"} Support
 
-        %section.contact-information
-          %article#organization-info.vcard{:itemscope => "", :itemtype => "http://schema.org/Organization"}
-            %h1.fn.org{:itemprop => "name"} Company Name
-            .adr{:itemprop => "address", :itemscope => "", :itemtype => "http://schema.org/PostalAddress"}
-              %div{:itemprop => "streetAddress"}
-                %span.street-address 555 Main Street,
-                %span.extended-address Suite 200
-              %span.locality{:itemprop => "addressLocality"} Pittsburgh,
-              %span.region{:itemprop => "addressRegion"} PA
-              %span.postal-code{:itemprop => "postalCode"} 15222
-            %div.tel{:itemprop => "telephone"} 555-1212
-            %div.email
-              %a.email{:href => "#", :itemprop => "email"} Email Us
-
+        %section.contact
+          %p Built by Bearded. 
+          %p 
+            For more information, 
+            %a{:href => "http://www.bearded.com/contact"} contact us.
         %section.legal{:role => "contentinfo"}
-          %p.copyright Copyright #{Date.today.year.to_s}, Another copyright statement here.
+          %p.copyright All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
