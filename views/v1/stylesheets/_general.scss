@@ -105,3 +105,6 @@ em, i {
 // Other elements
 //////////////////////////////////////
 
+.button {
+  @include button;
+}

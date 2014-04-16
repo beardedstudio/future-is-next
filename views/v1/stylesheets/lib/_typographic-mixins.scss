@@ -1,13 +1,19 @@
 // typographic mixins and extends
 
 @mixin copy-face {
-  font-family: georgia, "Times New Roman", times, serif;
-  font-weight: normal;
+  font-family: "interface", arial, "helvetica neue", helvetica, sans-serif;
+  font-weight: 400;
+}
+
+@mixin heading-face {
+  font-family: "interface", arial, "helvetica neue", helvetica, sans-serif;
+  font-weight: 700;
 }
 
 @mixin title-face {
-  font-family: arial, "helvetica neue", helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "interface", arial, "helvetica neue", helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 @mixin link {
@@ -39,7 +45,7 @@
 }
 
 @mixin heading {
-  @include title-face;
+  @include heading-face;
   margin-bottom: 0.35em;
   line-height: 1.2;
   color: $heading-color;

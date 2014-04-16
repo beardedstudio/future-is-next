@@ -17,15 +17,14 @@
     %meta{:name => "description", :content => ""}
     %meta{:name => "keywords", :content => ""}
     %link{:href => "/v1/stylesheets/screen.css", :rel => "stylesheet"}
+    <script type="text/javascript" src="//use.typekit.net/jgu5zet.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     %script{:src => "/v1/javascripts/vendor/modernizr.min.js"}
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
+      %img{:src => "/v1/images/montage-long.jpg", :alt => "A Lead Image"}
       .container
-        %h1.site-name
-          %a{:href => "/"} What Comes Next Is The Future
-        -# Use an image for your logo
-        %a{:href => "#"}
-          %img.main-logo{:alt => "", :src => ""}
+        %h1.site-name What Comes Next Is The Future
 
     =yield
 
@@ -39,8 +38,6 @@
               %a{:href => "#", :rel => "me"} Facebook
             %li
               %a{:href => "#", :rel => "me"} Kickstarter
-            %li
-              %a{:href => "#", :rel => "me"} Social Account
 
         %section.contact
           %p Built by Bearded. 

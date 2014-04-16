@@ -4,6 +4,24 @@
 
 // site-wide header styles
 .site-header {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  padding-bottom: 1em;
+  img {
+    max-height: 300px;
+    max-width: inherit;
+    position: absolute;
+  }
+  .site-name {
+    @include title-face;
+    text-align: center;
+    color: $background_color;
+    @include single-text-shadow(0, 0, 20px, false, rgba(black, 1));
+    position: relative;
+    z-index: 10;
+    padding-top: 2.5em;
+  }
 }
 
 .primary-navigation {
@@ -11,10 +29,6 @@
 
 // use for things like user login/logout, other top-level, but lesser important links in header.
 .utility-navigation {
-}
-
-// usually, an h1 that you're visually hiding with css
-.site-name {
 }
 
 .main-logo {
