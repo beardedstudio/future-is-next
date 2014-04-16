@@ -1,0 +1,63 @@
+@mixin divider-bottom {
+  padding-bottom: 1em;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 1em;
+}
+
+@mixin divider-top {
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+  margin-top: 1em;
+}
+
+@mixin divider-right {
+  padding-right: 1em;
+  border-right: 1px solid $border-color;
+  margin-right: 1em;
+}
+
+@mixin divider-left {
+  padding-left: 1em;
+  border-left: 1px solid $border-color;
+  margin-left: 1em;
+}
+
+@mixin divider-none {
+  padding: 0;
+  border: 0 none;
+  margin: 0;
+}
+
+@mixin button {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: $background-color;
+  background-color: $link-color;
+  @include border-radius(4px);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $link-color-hover;
+  }
+}
+
+@mixin button-reverse {
+  @include button;
+  background-color: $background-color-subtle;
+  color: $link-color;
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+    background-color: $background-color;
+  }
+}
+
+@mixin button-form {
+  @include button;
+  border: 0 none;
+  font-size: 1em;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
