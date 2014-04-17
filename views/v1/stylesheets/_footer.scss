@@ -1,6 +1,7 @@
 // site-wide footer styles
 
 .site-footer {
+  @include divider-top;
 }
 
 .legal {
@@ -13,5 +14,8 @@
   text-align: center;
   li {
     margin: 0 0.25em 0.5em 0.25em;
+    a {
+      @include button;
+    }
   }
 }

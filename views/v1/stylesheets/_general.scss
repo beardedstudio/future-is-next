@@ -108,3 +108,7 @@ em, i {
 .button {
   @include button;
 }
+
+.screenreader-text {
+  @include screenreader-text;
+}

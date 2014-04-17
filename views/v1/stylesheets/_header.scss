@@ -7,20 +7,43 @@
   overflow: hidden;
   position: relative;
   height: 300px;
-  padding-bottom: 1em;
+  background-color: $highlight_color;
+  @include pie-clearfix;
   img {
     max-height: 300px;
     max-width: inherit;
     position: absolute;
+    left: 50%;
+    margin-left: -800px;
   }
   .site-name {
     @include title-face;
     text-align: center;
     color: $background_color;
-    @include single-text-shadow(0, 0, 20px, false, rgba(black, 1));
+    @include single-text-shadow(0, 0, 0.35em, false, rgba(black, 1));
     position: relative;
     z-index: 10;
     padding-top: 2.5em;
+
+    @include breakpoint($breakpoint-s) {
+      font-size: 3.5em;
+      padding-top: 1.4em;
+    }
+    @include breakpoint($breakpoint-m) {
+      font-size: 4.5em;
+      padding-top: 0.95em;
+      line-height: 1.1;
+    }
+    @include breakpoint($breakpoint-l) {
+      font-size: 5.5em;
+      padding-top: 0.56em;
+      line-height: 1.1;
+    }
+    @include breakpoint($breakpoint-xl) {
+      font-size: 7em;
+      padding-top: 0.34em;
+      line-height: 1;
+    }
   }
 }
 

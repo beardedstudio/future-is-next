@@ -24,7 +24,10 @@
     %header.site-header{:role => "banner"}
       %img{:src => "/v1/images/montage-long.jpg", :alt => "A Lead Image"}
       .container
-        %h1.site-name What Comes Next Is The Future
+        %h1.site-name 
+          What Comes Next
+          %br
+          Is The Future
 
     =yield
 
@@ -40,7 +43,9 @@
               %a{:href => "#", :rel => "me"} Kickstarter
 
         %section.contact
-          %p Built by Bearded. 
+          %a{:href => "http://www.bearded.com"} 
+            %img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded"}
+            %span.screenreader-text Built by Bearded. 
           %p 
             For more information, 
             %a{:href => "http://www.bearded.com/contact"} contact us.

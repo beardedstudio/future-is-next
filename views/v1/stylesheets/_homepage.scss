@@ -1,9 +1,20 @@
 // homepage-specific styles
 
 .home {
+  .main-content {
+    padding-top: 1.5em;
+  }
+
   h3 {
     margin-bottom: 0.5em;
   }
   .button {
+  }
+  .call-to-action {
+    margin-top: 1em;
+    padding: 1em 1em 1.35em 1em;
+    background-color: $background-color-subtle;
+    border: 1px solid $border-color;
+    text-align: center;
   }
 }

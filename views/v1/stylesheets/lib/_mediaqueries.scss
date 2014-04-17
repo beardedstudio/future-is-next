@@ -7,9 +7,9 @@
 $breakpoint-to-ems: true;
 
 // "suggested" variable names for pre-defined breakpoints
-$breakpoint-s: 400px; // it's ok to put px values in here if you've set "-to-ems" to "true"!
-$breakpoint-m: 700px;
-$breakpoint-l: 960px;
+$breakpoint-s: 540px; // it's ok to put px values in here if you've set "-to-ems" to "true"!
+$breakpoint-m: 690px;
+$breakpoint-l: 840px;
 $breakpoint-xl: 1100px;
 
 // media query for hi-resolution displays
