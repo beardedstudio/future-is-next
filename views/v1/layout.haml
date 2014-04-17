@@ -28,6 +28,8 @@
           What Comes Next
           %br
           Is The Future
+        %a{:href => "#", :class => "button"} Watch The Trailer on Kickstarter!
+
 
     =yield
 
@@ -36,20 +38,26 @@
         %section.social-media
           %ul
             %li
-              %a{:href => "https://twitter.com/futureisnext", :rel => "me"} Twitter
+              %a{:href => "https://twitter.com/futureisnext", :rel => "me"} 
+                %img{:src => "/v1/images/social-twitter.svg", :alt => "Twitter icon", :class => "twitter"}
+                %span.screenreader-text Twitter
             %li
-              %a{:href => "#", :rel => "me"} Facebook
+              %a{:href => "#", :rel => "me"} 
+                %img{:src => "/v1/images/social-facebook.svg", :alt => "Facebook icon", :class => "facebook"}
+                %span.screenreader-text Facebook
             %li
-              %a{:href => "#", :rel => "me"} Kickstarter
+              %a{:href => "#", :rel => "me"} 
+                %img{:src => "/v1/images/social-kickstarter.svg", :alt => "Kickstarter icon", :class => "kickstarter"}
+                %span.screenreader-text Kickstarter
 
-        %section.contact
+        %section.site-credit
           %a{:href => "http://www.bearded.com"} 
-            %img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded"}
+            %img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded", :class => "built-by-bearded"}
             %span.screenreader-text Built by Bearded. 
-          %p 
+        %section.info{:role => "contentinfo"}
+          %p.contact 
             For more information, 
-            %a{:href => "http://www.bearded.com/contact"} contact us.
-        %section.legal{:role => "contentinfo"}
+            %a{:href => "http://www.bearded.com/contact"} contact Bearded.
           %p.copyright All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version

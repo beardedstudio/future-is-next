@@ -8,6 +8,9 @@
   position: relative;
   height: 300px;
   background-color: $highlight_color;
+  @include breakpoint($breakpoint-l) {
+    height: 400px;
+  }
   @include pie-clearfix;
   img {
     max-height: 300px;
@@ -15,35 +18,52 @@
     position: absolute;
     left: 50%;
     margin-left: -800px;
+    @include breakpoint($breakpoint-l) {
+      max-height: 400px;
+      margin-left: -1066px;
+    }
   }
   .site-name {
     @include title-face;
     text-align: center;
     color: $background_color;
-    @include single-text-shadow(0, 0, 0.35em, false, rgba(black, 1));
+    @include single-text-shadow(-0.11em, -0.07em, 0, false, rgba(black, 1));
     position: relative;
     z-index: 10;
-    padding-top: 2.5em;
+    padding-top: 1.75em;
+    margin-bottom: 1rem;
 
     @include breakpoint($breakpoint-s) {
       font-size: 3.5em;
-      padding-top: 1.4em;
+      padding-top: 0.75em;
     }
     @include breakpoint($breakpoint-m) {
       font-size: 4.5em;
-      padding-top: 0.95em;
+      padding-top: 0.5em;
       line-height: 1.1;
     }
     @include breakpoint($breakpoint-l) {
       font-size: 5.5em;
-      padding-top: 0.56em;
+      padding-top: 0.75em;
       line-height: 1.1;
     }
     @include breakpoint($breakpoint-xl) {
       font-size: 7em;
-      padding-top: 0.34em;
+      padding-top: 0.45em;
       line-height: 1;
     }
+  }
+  .button {
+    position: relative;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    @include heading-face;
+    @include single-box-shadow(rgba(black, 1), -0.35em, -0.35em, 0);
   }
 }
 

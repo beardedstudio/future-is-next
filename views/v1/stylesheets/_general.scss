@@ -15,7 +15,9 @@
   width: 95%;
 }
 
-html {}
+html {
+  background-color: $background_color;
+}
 
 body {}
 
@@ -33,6 +35,7 @@ body {
 
 p {
   margin-bottom: 1em;
+  font-size: 1.1em;
 }
 
 ul, ol {

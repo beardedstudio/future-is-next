@@ -1,21 +1,26 @@
 // site-wide footer styles
 
 .site-footer {
-  @include divider-top;
-}
-
-.legal {
-}
-
-.copyright {
+  @include pie-clearfix;
+  .site-credit {
+    @include divider-bottom;
+    img {
+      max-width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .info {
+    text-align: center;
+  }
 }
 
 .social-media {
+  @include divider-bottom;
+  @include pie-clearfix;
   text-align: center;
   li {
     margin: 0 0.25em 0.5em 0.25em;
-    a {
-      @include button;
-    }
+    @include inline-block;
   }
 }

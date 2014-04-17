@@ -35,10 +35,10 @@
   background-color: $link-color;
   display: block;
   text-align: center;
-  @include border-radius(4px);
   &:hover,
   &:focus {
     text-decoration: none;
+    color: $background-color;
     background-color: $link-color-hover;
   }
 }
