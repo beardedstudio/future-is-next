@@ -1,16 +1,16 @@
-$text-color: black; 
+$text-color: #FFF3ED; 
 $heading-color: $text-color;
 $text-color-subtle: lighten($text-color, 30%);
 
-$link-color: #dd9e00;
+$link-color: #55B6D9;
 $link-color-hover: darken($link-color, 15%);
 
-$highlight-color: #333;
+$highlight-color: #FFF3ED;
 $highlight-color-hover: darken($highlight-color, 15%);
 
 $border-color: #ccc;
 
-$background-color: #f9de85;
+$background-color: #0B0B25;
 $background-color-subtle: #eee;
 
-$footer-color: $link-color;
+$footer-color: #285676;

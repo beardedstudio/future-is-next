@@ -3,11 +3,16 @@
 .site-footer {
   @include pie-clearfix;
   .site-credit {
-    @include divider-bottom;
+    text-align:center;
     img {
       max-width: 200px;
       margin: 0 auto;
       display: block;
+    }
+    p {
+      color:$footer-color;
+      @include alternate-face;
+      font-size:2em;
     }
   }
   .info {
@@ -16,7 +21,6 @@
 }
 
 .social-media {
-  @include divider-bottom;
   @include pie-clearfix;
   text-align: center;
   li {

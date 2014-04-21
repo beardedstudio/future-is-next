@@ -22,7 +22,6 @@
     %script{:src => "/v1/javascripts/vendor/modernizr.min.js"}
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
-      %img{:src => "/v1/images/montage-long.jpg", :alt => "A Lead Image"}
       .container
         %h1.site-name 
           What Comes Next
@@ -51,14 +50,18 @@
                 %span.screenreader-text Kickstarter
 
         %section.site-credit
+          %p 
+            This documentary is brought to you by Bearded.
+            %span
+              All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
           %a{:href => "http://www.bearded.com"} 
-            %img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded", :class => "built-by-bearded"}
+            //%img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded", :class => "built-by-bearded"}
             %span.screenreader-text Built by Bearded. 
         %section.info{:role => "contentinfo"}
           %p.contact 
             For more information, 
             %a{:href => "http://www.bearded.com/contact"} contact Bearded.
-          %p.copyright All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
+         
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}

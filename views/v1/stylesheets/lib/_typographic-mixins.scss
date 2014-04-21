@@ -16,6 +16,12 @@
   font-weight: 900;
 }
 
+@mixin alternate-face {
+  font-family: "jaf-bernino-sans-comp", arial, "helvetica neue", helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 @mixin link {
   color: $link-color;
   text-decoration: none;

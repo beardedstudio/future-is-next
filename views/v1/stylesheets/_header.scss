@@ -4,32 +4,15 @@
 
 // site-wide header styles
 .site-header {
-  overflow: hidden;
-  position: relative;
-  height: 300px;
-  background-color: $highlight_color;
+  padding-top: 18em;
   @include breakpoint($breakpoint-l) {
-    height: 400px;
+
   }
   @include pie-clearfix;
-  img {
-    max-height: 300px;
-    max-width: inherit;
-    position: absolute;
-    left: 50%;
-    margin-left: -800px;
-    @include breakpoint($breakpoint-l) {
-      max-height: 400px;
-      margin-left: -1066px;
-    }
-  }
+
   .site-name {
     @include title-face;
     text-align: center;
-    color: $background_color;
-    @include single-text-shadow(-0.11em, -0.07em, 0, false, rgba(black, 1));
-    position: relative;
-    z-index: 10;
     padding-top: 1.75em;
     margin-bottom: 1rem;
 
@@ -63,7 +46,7 @@
     margin-right: auto;
     font-size: 1.1em;
     @include heading-face;
-    @include single-box-shadow(rgba(black, 1), -0.35em, -0.35em, 0);
+    @include single-box-shadow(darken($link-color,20%), 0.35em, 0.35em, 0);
   }
 }
 

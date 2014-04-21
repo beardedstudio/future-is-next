@@ -26,7 +26,6 @@ body {}
 //////////////////////////////////////
 
 body {
-  @include copy-face;
   color: $text-color;
   line-height: 1.4;
 }
@@ -34,6 +33,7 @@ body {
 ////////// Block-level Elements
 
 p {
+  @include copy-face;
   margin-bottom: 1em;
   font-size: 1.1em;
 }
