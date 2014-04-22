@@ -4,49 +4,74 @@
 
 // site-wide header styles
 .site-header {
-  padding-top: 18em;
+  text-align:center;
+
   @include breakpoint($breakpoint-l) {
 
   }
   @include pie-clearfix;
+  .lead-image {
+    width: 100%;
+    max-width: 700px;
+  }
 
   .site-name {
     @include title-face;
     text-align: center;
-    padding-top: 1.75em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    @include single-text-shadow(rgba(82,180,217, 0.7), 0, 0, 20px );
 
     @include breakpoint($breakpoint-s) {
       font-size: 3.5em;
-      padding-top: 0.75em;
     }
     @include breakpoint($breakpoint-m) {
       font-size: 4.5em;
-      padding-top: 0.5em;
       line-height: 1.1;
     }
     @include breakpoint($breakpoint-l) {
       font-size: 5.5em;
-      padding-top: 0.75em;
       line-height: 1.1;
     }
     @include breakpoint($breakpoint-xl) {
       font-size: 7em;
-      padding-top: 0.45em;
       line-height: 1;
     }
   }
   .button {
-    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:2em;
     text-align: center;
-    position: relative;
-    z-index: 10;
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.1em;
+    font-size: 1.25em;
+    color: darken($link-color, 40%);
     @include heading-face;
-    @include single-box-shadow(darken($link-color,20%), 0.35em, 0.35em, 0);
+    @include transition(all 0.1s linear);
+    @include single-text-shadow(rgba(255, 255, 255, 0.2), 1px, -1px, 0);
+    @include background(linear-gradient(top, darken($link-color,5%), $link-color));
+    box-shadow: -1px 0px 1px darken($link-color,20%), 
+      0px 1px 1px darken($link-color,40%),
+      -2px 1px 1px darken($link-color,20%), 
+      -1px 2px 1px darken($link-color,40%), 
+      -3px 2px 1px darken($link-color,20%),
+      -2px 3px 1px darken($link-color,40%), 
+      -4px 3px 1px darken($link-color,20%),
+      -3px 4px 1px darken($link-color,40%), 
+      -5px 4px 1px darken($link-color,20%),
+      -4px 5px 1px darken($link-color,40%), 
+      -6px 5px 1px darken($link-color,20%),
+      -5px 6px 1px darken($link-color,40%), 
+      -7px 6px 1px darken($link-color,20%),
+      -6px 7px 0 darken($link-color,40%), 
+      -8px 7px 0 darken($link-color,20%),
+      -8px 7px 20px rgba(82,180,217, 0.5);
+
+
+    &:hover,
+    &:focus, {
+     box-shadow: none;
+     @include translate3d(-7px, 7px, 0);
+    }
   }
 }
 

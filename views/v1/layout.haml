@@ -23,6 +23,7 @@
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
       .container
+        %img{:src => "/v1/images/header.gif", :alt => "lead image", :class => "lead"}
         %h1.site-name 
           What Comes Next
           %br
@@ -34,33 +35,20 @@
 
     %footer.site-footer
       .container
-        %section.social-media
-          %ul
-            %li
-              %a{:href => "https://twitter.com/futureisnext", :rel => "me"} 
-                %img{:src => "/v1/images/social-twitter.svg", :alt => "Twitter icon", :class => "twitter"}
-                %span.screenreader-text Twitter
-            %li
-              %a{:href => "#", :rel => "me"} 
-                %img{:src => "/v1/images/social-facebook.svg", :alt => "Facebook icon", :class => "facebook"}
-                %span.screenreader-text Facebook
-            %li
-              %a{:href => "#", :rel => "me"} 
-                %img{:src => "/v1/images/social-kickstarter.svg", :alt => "Kickstarter icon", :class => "kickstarter"}
-                %span.screenreader-text Kickstarter
-
         %section.site-credit
           %p 
             This documentary is brought to you by Bearded.
             %span
               All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
+            For more information, 
+            %a{:href => "http://www.bearded.com/contact"} contact us.
           %a{:href => "http://www.bearded.com"} 
             //%img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded", :class => "built-by-bearded"}
             %span.screenreader-text Built by Bearded. 
-        %section.info{:role => "contentinfo"}
-          %p.contact 
-            For more information, 
-            %a{:href => "http://www.bearded.com/contact"} contact Bearded.
+        / %section.info{:role => "contentinfo"}
+        /   %p.contact 
+        /     For more information, 
+        /     %a{:href => "http://www.bearded.com/contact"} contact Bearded.
          
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
