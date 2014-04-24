@@ -31,3 +31,10 @@
     @include inline-block;
   }
 }
+
+.site-credit {
+  a {
+    color:$footer-color;
+    text-decoration: underline;
+  }
+}

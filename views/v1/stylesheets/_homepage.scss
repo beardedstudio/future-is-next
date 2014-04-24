@@ -1,7 +1,7 @@
 // homepage-specific styles
 
 .home {
-  @include background(url('../images/background.gif') top center repeat); 
+  @include background(url('../images/background-animation.gif') top center repeat); 
 
   .main-content {
     padding-top: 1.5em;
@@ -11,21 +11,64 @@
     }
   }
   .featured {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #b6b6be;
+
+
     @include breakpoint($breakpoint-l) {
       @include pie-clearfix;
       margin-bottom: 1.5em;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 400px;
-      text-align: center;
+      max-width: 420px;
     }
 
     h2 {
+      @include heading-3;
+      line-height:1.5;
       margin-bottom:1em;
+      color: #e7e7ea;
 
     }
     p {
-     
+     margin-bottom:2em;
+    }
+  }
+  .social-media {
+    margin-bottom:1.5em;
+    li a {
+      color:lighten($footer-color,10%);
+      display:inline-block;
+      text-transform: uppercase;
+      background-color:$background-color;
+      padding:0.5em 0.75em;
+      border:2px solid lighten($footer-color,10%);
+      @include heading-face;
+      @include transition(all 0.1s linear);
+      //@include background(linear-gradient(top, darken($link-color,5%), $link-color));
+      box-shadow: -1px 0px 1px darken($link-color,20%), 
+        0px 1px 1px darken($link-color,40%),
+        -2px 1px 1px darken($link-color,20%), 
+        -1px 2px 1px darken($link-color,40%), 
+        -3px 2px 1px darken($link-color,20%),
+        -2px 3px 1px darken($link-color,40%), 
+        -4px 3px 1px darken($link-color,20%),
+        -3px 4px 0 darken($link-color,40%), 
+        -5px 4px 0 darken($link-color,20%),
+        -5px 4px 10px rgba(82,180,217, 0.1);
+      @include breakpoint($breakpoint-l) {
+        padding:0.5em 2.5em;
+      }
+      &:hover,
+      &:focus, {
+       box-shadow: -1px 0px 1px darken($link-color,20%), 
+        0px 1px 1px darken($link-color,40%),
+        -2px 1px 0 darken($link-color,20%), 
+        -1px 2px 0 darken($link-color,40%);
+       @include translate3d(-5px, 5px, 0);
+       text-decoration:none;
+      }
     }
   }
   .interviewees {
@@ -36,15 +79,24 @@
     li{
       @include inline-block;
       @include alternate-face;
-      color:$footer-color;
-      font-size:2em;
+      color:lighten($footer-color,10%);
+      font-size:1.75em;
+
+      @include breakpoint($breakpoint-l) {
+        font-size:2em;
+      }
 
       .author, .company {
+        color:$footer-color;
         font-size: 1.5rem;
       }
     }
     li:after {
       content:",";
+      @include inline-block;
+      line-height:0;
+      margin-left:-2px;
+      color:$footer-color;
     }
 
   }

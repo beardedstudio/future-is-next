@@ -23,7 +23,7 @@
   %body{:class => bodyclass}
     %header.site-header{:role => "banner"}
       .container
-        %img{:src => "/v1/images/header.gif", :alt => "lead image", :class => "lead"}
+        %img{:src => "/v1/images/header.gif", :alt => "lead image", :class => "lead-image"}
         %h1.site-name 
           What Comes Next
           %br
@@ -42,13 +42,6 @@
               All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
             For more information, 
             %a{:href => "http://www.bearded.com/contact"} contact us.
-          %a{:href => "http://www.bearded.com"} 
-            //%img{:src => "/v1/images/built-by-bearded.svg", :alt => "Built by Bearded", :class => "built-by-bearded"}
-            %span.screenreader-text Built by Bearded. 
-        / %section.info{:role => "contentinfo"}
-        /   %p.contact 
-        /     For more information, 
-        /     %a{:href => "http://www.bearded.com/contact"} contact Bearded.
          
   -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
