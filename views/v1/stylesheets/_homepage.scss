@@ -98,6 +98,8 @@
       margin-left:-2px;
       color:$footer-color;
     }
-
+    li.last:after {
+      content:"";
+    }
   }
 }
