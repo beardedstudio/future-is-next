@@ -29,7 +29,7 @@
           What Comes Next
           %br
           Is The Future
-        %a{:href => "http://kck.st/1rIKaos", :class => "button"} Watch The Trailer on Kickstarter!
+        <iframe class="trailer" src="//player.vimeo.com/video/98069967?byline=0&amp;portrait=0" width="100%" height="365" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
     =yield
@@ -38,7 +38,8 @@
       .container
         %section.site-credit
           %p 
-            This documentary is brought to you by Bearded.
+            This documentary is brought to you by 
+            %a{:href => "http://www.bearded.com"} Bearded.
             %span
               All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved. 
             For more information, 
