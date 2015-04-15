@@ -15,7 +15,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #b6b6be;
+    color: $text-color-subtle;
 
 
     @include breakpoint($breakpoint-l) {
@@ -28,7 +28,7 @@
       @include heading-3;
       line-height:1.5;
       margin-bottom:1em;
-      color: #e7e7ea;
+      color: $text-color;
 
     }
     p {
@@ -76,6 +76,8 @@
     max-width: 900px;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom: 4em;
+
     li{
       @include inline-block;
       @include alternate-face;
@@ -100,6 +102,71 @@
     }
     li.last:after {
       content:"";
+    }
+  }
+  .sponsors-group {
+    text-align:center;
+    max-width: 900px;
+    color: lighten($footer-color,10%);
+    @include pie-clearfix;
+    margin-left:auto;
+    margin-right:auto;
+
+    h2 {
+      color: $text-color-subtle;
+      margin-bottom: 1em;
+    }
+
+    .sponsors {
+      @include copy-face;
+      font-size: 1.1em;
+      margin-bottom: 1em;
+      @include pie-clearfix;
+
+      &.diamond {
+        font-size: 1.75em;
+        li {
+          margin-bottom: 0.25em;
+          @include breakpoint($breakpoint-m) {
+            @include column(6);
+            @include last-col2;            
+          }
+          @include breakpoint($breakpoint-xl) {
+            @include column(4);
+            @include last-col3;            
+          }
+        }
+      }
+      &.rhodium {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+        li {
+          @include breakpoint($breakpoint-xs) {
+            @include column(6);
+            @include last-col2;            
+          }
+          @include breakpoint($breakpoint-m) {
+            @include column(3);
+            @include last-col4;            
+          }
+        }
+      }
+      &.gold {
+        margin-bottom: 2em;
+        li {
+          @include breakpoint($breakpoint-xs) {
+            @include column(6);
+            @include last-col2;            
+          }
+          @include breakpoint($breakpoint-m) {
+            @include column(3);
+            @include last-col4;            
+          }
+        }
+      }
+      &.everyone-else {
+        clear: both;
+      }
     }
   }
 }
