@@ -118,15 +118,21 @@
     }
 
     .sponsors {
-      @include copy-face;
-      font-size: 1.1em;
-      margin-bottom: 1em;
       @include pie-clearfix;
+      @include heading-face;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      line-height: 1.2;
+      margin-bottom: 1em;
+
+      li {
+        margin-bottom: 0.5em;
+      }
 
       &.diamond {
         font-size: 1.75em;
+
         li {
-          margin-bottom: 0.25em;
           @include breakpoint($breakpoint-m) {
             @include column(6);
             @include last-col2;            
@@ -138,8 +144,9 @@
         }
       }
       &.rhodium {
-        font-size: 1.5em;
+        font-size: 1.35em;
         margin-bottom: 1.5em;
+
         li {
           @include breakpoint($breakpoint-xs) {
             @include column(6);
@@ -152,7 +159,10 @@
         }
       }
       &.gold {
+        @include copy-face;
         margin-bottom: 2em;
+        text-transform: none;
+
         li {
           @include breakpoint($breakpoint-xs) {
             @include column(6);
@@ -166,6 +176,7 @@
       }
       &.everyone-else {
         clear: both;
+        text-transform: none;
       }
     }
   }
