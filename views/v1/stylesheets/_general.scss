@@ -19,7 +19,9 @@ html {
   background-color: $background_color;
 }
 
-body {}
+body {
+  @include background(url('../images/background-animation.gif') top center repeat);   
+}
 
 
 // General Typographic Styles

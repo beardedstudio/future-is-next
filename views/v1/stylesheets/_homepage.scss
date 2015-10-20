@@ -1,8 +1,6 @@
 // homepage-specific styles
 
 .home {
-  @include background(url('../images/background-animation.gif') top center repeat); 
-
   .main-content {
     padding-top: 1.5em;
     @include breakpoint($breakpoint-s) {
