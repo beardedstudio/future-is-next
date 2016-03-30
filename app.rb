@@ -3,7 +3,6 @@ require 'sinatra'
 require 'haml'
 require 'compass'
 require 'breakpoint'
-require 'rack-cache'
 
 # set sinatra's variables
 set :app_file, __FILE__
@@ -75,6 +74,12 @@ error do
   erb :'v1/500.html'
 end
 
+before do
+  if settings.production?
+    cache_control :public, max_age: (60 * 60 * 24) # 1 day
+    last_modified $updated_at ||= Time.now
+  end
+end
 
 # routes for non-error pages
 
