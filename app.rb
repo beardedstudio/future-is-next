@@ -10,6 +10,10 @@ set :root, File.dirname(__FILE__)
 set :views, "views"
 set :public_folder, 'static'
 
+if production?
+  set :static_cache_control, [:public, max_age: 60 * 60 * 24]
+end
+
 configure do
   set :haml, {:format => :html5, :escape_html => false}
   set :scss, {:style => :compact, :debug_info => false}
@@ -58,6 +62,23 @@ end
 
 get '/:version/503.html' do
   erb :"#{params[:version]}/503.html"
+end
+
+not_found do
+  status 404
+  erb :'v1/404.html'
+end
+
+error do
+  status 500
+  erb :'v1/500.html'
+end
+
+before do
+  if settings.production?
+    cache_control :public, max_age: (60 * 60 * 24) # 1 day
+    last_modified $updated_at ||= Time.now
+  end
 end
 
 # routes for non-error pages
