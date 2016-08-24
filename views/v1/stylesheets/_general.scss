@@ -117,3 +117,7 @@ em, i {
 .screenreader-text {
   @include screenreader-text;
 }
+
+.pending {
+  display: none;
+}

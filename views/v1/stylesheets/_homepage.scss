@@ -46,6 +46,13 @@
       border-color: darken($footer-color, 10%);
       font-size: 1.1em;
 
+      &.past {
+        color: $footer-color;
+        a, a:hover, a:focus {
+          color: $footer-color;
+        }
+      }
+
       li {
         display: inline-block;
         margin-right: 0.5em;
