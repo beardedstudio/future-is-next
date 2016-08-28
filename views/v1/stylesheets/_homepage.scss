@@ -48,6 +48,7 @@
 
       &.past {
         color: $footer-color;
+
         a, a:hover, a:focus {
           color: $footer-color;
         }
@@ -60,6 +61,21 @@
         &:last-of-type {
           margin-right: 0;
         }
+      }
+    }
+
+    .cta {
+      @include copy-face;
+      @include divider-bottom;
+      border-color: darken($footer-color, 10%);
+
+      .question {
+        font-size: 1.3em;        
+      }
+
+      a {
+        display: block;
+        font-size: 1.1em;        
       }
     }
   }
