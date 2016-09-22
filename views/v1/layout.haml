@@ -25,7 +25,7 @@
     %header.site-header{:role => "banner"}
       .container
         %img{:src => "/v1/images/header.gif", :alt => "lead image", :class => "lead-image"}
-        %h1.site-name 
+        %h1.site-name
           What Comes Next
           %br
           Is The Future
@@ -35,12 +35,12 @@
     %footer.site-footer
       .container
         %section.site-credit
-          %p 
-            This documentary is brought to you by 
+          %p
+            This documentary is brought to you by
             %a{:href => "http://www.bearded.com"} Bearded.
             %span
-              All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved. 
-            For more information, 
+              All site content &copy; #{Date.today.year.to_s} Bearded Studio, Inc., all rights reserved.
+            For more information,
             %a{:href => "http://www.bearded.com/contact"} contact us.
 
     :javascript
@@ -52,10 +52,9 @@
       ga('create', 'UA-21673060-5', 'futureisnext.com');
       ga('send', 'pageview');
 
-  -# Uncomment if you need jQuery          
     -# Load jquery from the google cdn. If they're not available, load a local, minified version
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
     :javascript
       window.jQuery || document.write('<script src="/v1/javascripts/vendor/jquery.min.js"><\/script>')
-  -# Uncomment if you need other JS and/or analytics scripts
-    %script{:src => "/v1/javascripts/name-of-file.js"}
+
+    %script{:src => "/v1/javascripts/site.js"}
